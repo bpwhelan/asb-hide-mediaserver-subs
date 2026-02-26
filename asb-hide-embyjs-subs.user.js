@@ -4,6 +4,8 @@
 // @version      1.0.0
 // @description  Hides Emby/Jellyfin native subtitle overlay whenever asbplayer bottom subtitles container exists.
 // @author       Beangate
+// @updateURL    https://raw.githubusercontent.com/bpwhelan/asb-hide-embyjs-subs/main/asb-hide-embyjs-subs.user.js
+// @downloadURL  https://raw.githubusercontent.com/bpwhelan/asb-hide-embyjs-subs/main/asb-hide-embyjs-subs.user.js
 // @match        *://*/web/index.html*
 // @run-at       document-start
 // @grant        none

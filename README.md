@@ -9,21 +9,15 @@ The script watches the DOM for the presence of asbplayer's bottom subtitle conta
 ## Installation
 
 1. Install a userscript manager. [Violentmonkey](https://violentmonkey.github.io/) is recommended — it is open source and actively maintained. Tampermonkey and Greasemonkey should work as well.
-2. Open the raw file: [`asb-hide-embyjs-subs.js`](asb-hide-embyjs-subs.js)
-3. Your userscript manager should prompt you to install it automatically. Confirm the installation.
+2. Click **[Install Script](https://raw.githubusercontent.com/bpwhelan/asb-hide-embyjs-subs/main/asb-hide-embyjs-subs.user.js)** — your userscript manager will intercept the `.user.js` URL and prompt you to install.
+3. Confirm the installation.
+
+The script includes `@updateURL` and `@downloadURL` headers, so Violentmonkey (and Tampermonkey) can check for and apply updates automatically from this repository.
 
 ## Requirements
 
 - An Emby or Jellyfin server running its standard web client (`/web/index.html`)
 - [asbplayer](https://github.com/killergerbah/asbplayer) browser extension installed and active
-
-## Compatibility
-
-| Manager | Status |
-|---|---|
-| Violentmonkey | Recommended |
-| Tampermonkey | Supported |
-| Greasemonkey | Should work |
 
 The script matches `*://*/web/index.html*` so it will run on any Emby or Jellyfin instance regardless of host or port.
 
@@ -34,7 +28,7 @@ The script matches `*://*/web/index.html*` so it will run on any Emby or Jellyfi
 
 ## Author
 
-[Beangate](https://github.com/Beangate)
+[Beangate](https://github.com/bpwhelan)
 
 ## License
 
