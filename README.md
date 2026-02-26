@@ -19,7 +19,7 @@ The script includes `@updateURL` and `@downloadURL` headers, so Violentmonkey (a
 - An Emby or Jellyfin server running its standard web client (`/web/index.html`)
 - [asbplayer](https://github.com/killergerbah/asbplayer) browser extension installed and active
 
-The script matches `*://*/web/index.html*` so it will run on any Emby or Jellyfin instance regardless of host or port.
+The script matches `*://*/web/index.html*` (Emby) or `://*/web/` (Jellyfin) so it will run on any Emby or Jellyfin instance regardless of host or port.
 
 ## Notes
 
