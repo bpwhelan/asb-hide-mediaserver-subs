@@ -7,6 +7,7 @@
 // @updateURL    https://raw.githubusercontent.com/bpwhelan/asb-hide-embyjs-subs/main/asb-hide-embyjs-subs.user.js
 // @downloadURL  https://raw.githubusercontent.com/bpwhelan/asb-hide-embyjs-subs/main/asb-hide-embyjs-subs.user.js
 // @match        *://*/web/index.html*
+// @match        *://*/web/
 // @run-at       document-start
 // @grant        none
 // ==/UserScript==
@@ -14,13 +15,16 @@
 (function () {
   'use strict';
 
-  const TARGET_HASH_PREFIX = '#!/videoosd/videoosd.html';
   const ASB_SELECTOR = '.asbplayer-subtitles-container-bottom';
   const EMBY_SUB_SELECTOR = '.videoSubtitles, [class*="videoSubtitles"]';
   const STYLE_ID = 'tm-asb-hide-embyjs-subs';
 
   function isTargetPage() {
-    return /\/web\/index\.html$/i.test(location.pathname) && location.hash.startsWith(TARGET_HASH_PREFIX);
+    const path = location.pathname;
+    const hash = location.hash;
+    const isEmby = /\/web\/index\.html$/i.test(path) && hash.startsWith('#!/videoosd/videoosd.html');
+    const isJellyfin = /\/web\/?$/i.test(path) && hash.startsWith('#/video');
+    return isEmby || isJellyfin;
   }
 
   function ensureHideStyle() {
